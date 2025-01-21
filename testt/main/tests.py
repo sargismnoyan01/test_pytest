@@ -6,7 +6,7 @@ from .models import *
 def test_home_view(client):
     url = reverse('home')  
     response = client.get(url)
-    assert response.status_code == 201
+    assert response.status_code == 203
 
 
 @pytest.mark.django_db

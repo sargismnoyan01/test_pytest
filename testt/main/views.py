@@ -10,7 +10,7 @@ def HomePage(request):
     if request.method == 'POST':
         form = UserFrom(request.POST)
         if form.is_valid():
-            form.save() 
+            form.save('k') 
             return redirect('/')
 
     return render(request, 'index.html', {'userclass': userclass, 'form': form})
